@@ -1,0 +1,123 @@
+{
+	"name":"pulsar",
+	"implClass":"org.apache.ranger.services.pulsar.RangerServicePulsar",
+	"label":"Pulsar",
+	"description":"Apache Pulsar",
+	"resources":[
+		{
+			"itemId":1,
+			"name":"tenant",
+			"type":"string",
+			"level":1,
+			"parent": "",
+			"mandatory":true,
+			"lookupSupported":true,
+			"recursiveSupported":false,
+			"excludesSupported":true,
+			"matcher":"org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+			"matcherOptions":{
+				"wildCard":true,
+				"ignoreCase":true
+			},
+			"validationRegEx":"",
+			"validationMessage":"",
+			"uiHint":"",
+			"label":"tenant",
+			"description":"tenant"
+		},
+		{
+			"itemId":2,
+			"name":"namespace",
+			"type":"string",
+			"level":2,
+			"parent": "tenant",
+			"mandatory":true,
+			"lookupSupported":true,
+			"recursiveSupported":false,
+			"excludesSupported":true,
+			"matcher":"org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+			"matcherOptions":{
+				"wildCard":true,
+				"ignoreCase":true
+			},
+			"validationRegEx":"",
+			"validationMessage":"",
+			"uiHint":"",
+			"label":"namespace",
+			"description":"namespace"
+		},
+		{
+			"itemId":3,
+			"name":"topic",
+			"type":"string",
+			"level":3,
+			"parent": "namespace",
+			"mandatory":true,
+			"lookupSupported":true,
+			"recursiveSupported":false,
+			"excludesSupported":true,
+			"matcher":"org.apache.ranger.plugin.resourcematcher.RangerDefaultResourceMatcher",
+			"matcherOptions":{
+				"wildCard":true,
+				"ignoreCase":true
+			},
+			"validationRegEx":"",
+			"validationMessage":"",
+			"uiHint":"",
+			"label":"Topic",
+			"description":"topic"
+		}
+
+	],
+	"accessTypes":[
+		{
+			"itemId":1,
+			"name":"produce",
+			"label":"Produce"
+		},
+		{
+			"itemId":2,
+			"name":"consume",
+			"label":"Consume"
+		}
+	],
+	"configs":[
+		{
+			"itemId":1,
+			"name":"username",
+			"type":"string",
+			"mandatory":true,
+			"label":"Username"
+		},
+		{
+			"itemId":2,
+			"name":"password",
+			"type":"password",
+			"mandatory":true,
+			"label":"Password"
+		},
+		{
+			"itemId":3,
+			"name":"zookeeper.connect",
+			"type":"string",
+			"mandatory":true,
+			"defaultValue":"localhost:2181",
+			"label":"Zookeeper Connect String"
+		},
+		{
+			"itemId":4,
+			"name":"commonNameForCertificate",
+			"type":"string",
+			"mandatory":false,
+			"label":"Ranger Plugin SSL CName"
+		}
+
+	],
+	"enums":[
+	],
+	"contextEnrichers":[
+
+	],
+	"policyConditions":[
+	]
+}

@@ -418,6 +418,19 @@
             </modules>
         </profile>
         <profile>
+            <id>ranger-pulsar-plugin</id>
+            <modules>
+                <module>agents-audit</module>
+                <module>agents-common</module>
+                <module>agents-cred</module>
+                <module>agents-installer</module>
+                <module>credentialbuilder</module>
+                <module>ranger-plugin-classloader</module>
+                <module>ranger-util</module>
+                <module>plugin-pulsar</module>
+            </modules>
+        </profile>
+        <profile>
             <id>ranger-solr-plugin</id>
             <modules>
                 <module>agents-audit</module>
