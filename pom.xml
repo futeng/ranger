@@ -555,6 +555,7 @@
                 <module>plugin-ozone</module>-->
                 <module>security-admin</module>
                 <module>plugin-kafka</module>
+                <module>plugin-pulsar</module>
                 <!--
                 <module>plugin-solr</module>
                 <module>plugin-nifi</module>
